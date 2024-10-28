@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Documentación Estadística</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+
+  <body>
+    <main id="main-doc">
+      
+      <nav id="navbar">
+          <header>Estadística fundamental</header>
+          <ul>
+              <li><a class="nav-link" href="#Introducción">Introducción</a></li>
+              <li><a class="nav-link" href="#Muestreo">Muestreo</a></li>
+              <li><a class="nav-link" href="#Teoría_de_la_probabilidad">Teoría de la probabilidad</a></li>
+              <li><a class="nav-link" href="#Distribuciones_estadísticas_comunes">Distribuciones estadísticas comunes</a></li>
+              <li><a class="nav-link" href="#Intervalos_de_confianza">Intervalos de confianza</a></li>
+              <li><a class="nav-link" href="#Pruebas_de_hipótesis">Pruebas de hipótesis</a></li>
+              <li><a class="nav-link" href="#Referencia">Referencia</a></li>
+          </ul>
+      </nav>
+
+      <section class="main-section" id="Introducción">
+        <header>Introducción</header>
+        <p>Esta documentación explica algunos conceptos de estadística básica, junto con sus aplicaciones en Python. Se centra más en la teoría de la estadística, suponiéndose un conocimiento básico de Python y de algunas de sus funciones más utilizadas.</p>
+        <p>La ciencia y la ingeniería dependen en gran medida de las mediciones de las magnitudes con las que trabajan, realizadas en los experimentos. Al hacer una medición, siempre se ha de tener en cuenta la incertidumbre que va asociada a ella. La <strong>estadística</strong> es la ciencia que se ocupa de la obtención, análisis e interpretación de datos con incertidumbre.</p>
+      </section>
+      
+
+
+
+
+      <section class="main-section" id="Muestreo">
+        <header>Muestreo</header>
+        <p><strong>¿Qué es el muestreo?</strong></p>
+    <p>En estadística, el muestreo es la técnica de seleccionar una parte representativa de una población para estudiar sus características y hacer inferencias sobre la población completa. Esto se hace porque a menudo es impracticable o ineficiente examinar a todos los individuos de una población.</p>
+
+    <h3>Tipos de muestreo</h3>
+
+    <h4>Muestreo probabilístico</h4>
+
+    <ul>
+        <li><strong>Muestreo aleatorio simple:</strong> Cada individuo de la población tiene la misma probabilidad de ser seleccionado.</li>  
+
+        <li><strong>Muestreo estratificado:</strong> La población se divide en estratos y se seleccionan muestras aleatorias de cada estrato.</li>
+        <li><strong>Muestreo por conglomerados:</strong> La población se divide en conglomerados y se seleccionan algunos conglomerados al azar. Luego, se seleccionan muestras de los conglomerados seleccionados.</li>
+        <li><strong>Muestreo sistemático:</strong> Se selecciona un punto de partida aleatorio y luego se selecciona cada k-ésimo individuo de la población.</li>
+    </ul>
+
+    <h4>Muestreo no probabilístico</h4>
+
+    <ul>
+        <li><strong>Muestreo por conveniencia:</strong> Se seleccionan individuos que son fáciles de acceder.</li>
+        <li><strong>Muestreo juicioso:</strong> Se seleccionan individuos que se cree que son representativos de la población.</li>
+        <li><strong>Muestreo por cuotas:</strong> Se seleccionan individuos para cumplir ciertos criterios de cuota.</li>
+    </ul>
+
+    <h3>Ejemplo de muestreo aleatorio simple en Python</h3>
+
+    <pre>
+<div class="code"><code>import random
+
+poblacion = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+muestra = random.sample(poblacion, 3)
+
+print(muestra)
+</code></div></pre>
+
+    <p><strong>¿Por qué es importante el muestreo?</strong></p>
+
+    <p>El muestreo es una herramienta esencial en la investigación estadística. Permite a los investigadores recopilar datos de manera eficiente y hacer inferencias sobre poblaciones más grandes. Sin embargo, es importante seleccionar el tipo de muestreo adecuado para garantizar que la muestra sea representativa de la población.</p>
+
+    <p><strong>¿Cuáles son los factores a considerar al elegir un método de muestreo?</strong></p>
+
+    <ul>
+        <li><strong>Tamaño de la población:</strong> Si la población es pequeña, puede ser posible muestrear a todos los individuos.</li>
+        <li><strong>Heterogeneidad de la población:</strong> Si la población es muy heterogénea, se puede utilizar el muestreo estratificado para asegurar que se representen todos los grupos.</li>
+        <li><strong>Disponibilidad de recursos:</strong> El costo y el tiempo necesarios para realizar el muestreo deben ser considerados.</li>
+        <li><strong>Precisión deseada:</strong> El nivel de precisión requerido determinará el tamaño de la muestra.</li>
+    </ul>
+    </section>
+
+
+
+      <section class="main-section" id="Teoría_de_la_probabilidad">
+        <header>Teoría de la probabilidad</header>
+
+    <p>La teoría de la probabilidad es una rama de las matemáticas que estudia los fenómenos aleatorios y estocásticos. Nos proporciona un marco para cuantificar la incertidumbre y tomar decisiones basadas en datos incompletos.</p>
+
+    <h3>Conceptos Básicos</h3>
+    <ul>
+        <li><strong>Experimento aleatorio:</strong> Un proceso cuyo resultado no se puede predecir con certeza antes de que ocurra.</li>
+        <li><strong>Espacio muestral:</strong> El conjunto de todos los posibles resultados de un experimento aleatorio.</li>
+        <li><strong>Evento:</strong> Un subconjunto del espacio muestral.</li>
+        <li><strong>Probabilidad:</strong> Una medida numérica entre 0 y 1 que asignamos a un evento, indicando la probabilidad de que ocurra.</li>
+    </ul>
+
+    <h3>Reglas de la Probabilidad</h3>
+    <ul>
+        <li><strong>Regla de la suma:</strong> La probabilidad de que ocurra al menos uno de dos eventos mutuamente excluyentes es igual a la suma de sus probabilidades individuales.</li>
+        <li><strong>Regla del producto:</strong> La probabilidad de que ocurran dos eventos independientes es igual al producto de sus probabilidades individuales.</li>
+    </ul>
+
+    <h3>Distribución de Probabilidad</h3>
+    <p>Una distribución de probabilidad describe cómo se distribuyen los valores de una variable aleatoria.</p>
+    <ul>
+        <li><strong>Distribución binomial:</strong> Describe el número de éxitos en un número fijo de ensayos de Bernoulli.</li>
+        <li><strong>Distribución normal:</strong> Una distribución continua en forma de campana, muy común en muchos fenómenos naturales.</li>
+        <li><strong>Otras distribuciones:</strong> Poisson, t de Student, chi-cuadrado, etc., cada una con sus características y aplicaciones.</li>
+    </ul>
+
+    <h3>Ejemplo en Python: Simulación de un lanzamiento de moneda</h3>
+    <pre>
+<div class="code"><code>import random
+
+def lanzar_moneda():
+    resultado = random.choice(["Cara", "Cruz"])
+    return resultado
+
+# Simular 10 lanzamientos
+resultados = [lanzar_moneda() for _ in range(10)]
+print(resultados)
+</code></div>
+    </pre>
+
+    <p>La teoría de la probabilidad es fundamental en estadística, ciencia de datos, finanzas, y muchas otras áreas. Nos permite modelar la incertidumbre, tomar decisiones informadas y evaluar riesgos.</p>
+      </section>
+
+
+
+
+
+      <section class="main-section" id="Distribuciones_estadísticas_comunes">
+        <header>Distribuciones estadísticas comunes</header>
+
+    <p>Una distribución de probabilidad describe cómo se distribuyen los valores de una variable aleatoria. Existen numerosas distribuciones, cada una con sus características y aplicaciones específicas.</p>
+
+    <h3>Distribuciones Discretas</h3>
+    <ul>
+        <li><strong>Distribución de Bernoulli:</strong> Describe experimentos con dos posibles resultados (éxito o fracaso), como lanzar una moneda.</li>
+        <li><strong>Distribución binomial:</strong> Generaliza la de Bernoulli para múltiples ensayos independientes. Cuenta el número de éxitos en un número fijo de ensayos.</li>
+        <li><strong>Distribución de Poisson:</strong> Modela el número de ocurrencias de un evento en un intervalo de tiempo o espacio fijo, cuando las ocurrencias son independientes y ocurren a una tasa constante.</li>
+        <li><strong>Distribución geométrica:</strong> Describe el número de ensayos necesarios para obtener el primer éxito en una secuencia de ensayos de Bernoulli.</li>
+    </ul>
+
+    <h3>Distribuciones Continuas</h3>
+    <ul>
+        <li><strong>Distribución normal:</strong> La más conocida, con forma de campana. Describe muchos fenómenos naturales y sociales.</li>
+        <li><strong>Distribución exponencial:</strong> Modela el tiempo entre ocurrencias de eventos en un proceso de Poisson.</li>
+        <li><strong>Distribución t de Student:</strong> Similar a la normal, pero se utiliza cuando el tamaño de la muestra es pequeño o se desconoce la desviación estándar de la población.</li>
+        <li><strong>Distribución chi-cuadrado:</strong> Se utiliza en pruebas de hipótesis relacionadas con varianzas y en análisis de tablas de contingencia.</li>
+        <li><strong>Distribución F:</strong> Se utiliza en el análisis de varianza (ANOVA) para comparar varianzas de diferentes grupos.</li>
+    </ul>
+
+    <h3>Visualización de Distribuciones</h3>
+    <p>Para visualizar una distribución de probabilidad, se utilizan histogramas, densidades de probabilidad o funciones de masa de probabilidad. Estas herramientas gráficas permiten entender de manera intuitiva las características de una distribución.</p>
+
+    <h3>Ejemplo en Python: Generando números aleatorios de una distribución normal</h3>
+    <pre>
+<div class="code"><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Generar 1000 números aleatorios de una distribución normal con media 0 y desviación estándar 1
+mu, sigma = 0, 1
+s = np.random.normal(mu, sigma, 1000)
+
+# Histograma
+count, bins, ignored = plt.hist(s, 30, density=True)
+
+# Curva de densidad de la distribución normal
+plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) *
+               np.exp( - (bins - mu)**2 / (2 * sigma**2) ),
+          linewidth=2, color='r')
+plt.show()
+</code></div>
+    </pre>
+
+    <p>Las distribuciones estadísticas son fundamentales en inferencia estadística y en la construcción de modelos probabilísticos. Al comprender las diferentes distribuciones y sus propiedades, podemos seleccionar la distribución adecuada para modelar un conjunto de datos y realizar análisis estadísticos más precisos.</p>
+      </section>
+      
+
+
+
+
+
+
+      <section class="main-section" id="Intervalos_de_confianza">
+        <header>Intervalos de confianza</header>
+
+    <p>Un intervalo de confianza es un rango de valores que se utiliza para estimar un parámetro poblacional desconocido con un determinado nivel de confianza.  
+ En otras palabras, es un rango de valores dentro del cual creemos que se encuentra el verdadero valor del parámetro con una cierta probabilidad.</p>
+
+    <h3>¿Por qué usamos intervalos de confianza?</h3>
+    <p>En la práctica, rara vez tenemos acceso a toda la población. Por lo tanto, utilizamos muestras para hacer inferencias sobre la población completa. Los intervalos de confianza nos permiten cuantificar la incertidumbre asociada a estas estimaciones.</p>
+
+    <h3>Componentes de un intervalo de confianza</h3>
+    <ul>
+        <li><strong>Estimación puntual:</strong> El valor obtenido a partir de la muestra (por ejemplo, la media muestral) que se utiliza como punto central del intervalo.</li>
+        <li><strong>Margen de error:</strong> La cantidad que se suma y resta a la estimación puntual para obtener los límites del intervalo.</li>
+        <li><strong>Nivel de confianza:</strong> La probabilidad de que el intervalo contenga el verdadero valor del parámetro poblacional.</li>
+    </ul>
+
+    <h3>Ejemplo: Intervalo de confianza para la media</h3>
+    <p>Supongamos que queremos estimar la altura promedio de los estudiantes de una universidad. Tomamos una muestra aleatoria de 100 estudiantes y calculamos la media muestral. Podemos construir un intervalo de confianza del 95% para la media poblacional utilizando la distribución t de Student.</p>
+
+    <h3>Cálculo de un intervalo de confianza en Python</h3>
+    <pre>
+<div class="code"><code>import numpy as np
+import scipy.stats as stats
+
+# Datos de muestra (ejemplo)
+datos = np.array([165, 172, 168, ..., 170])
+
+# Nivel de confianza
+alpha = 0.05
+
+# Cálculo del intervalo de confianza
+media_muestral = np.mean(datos)
+desviacion_estandar = np.std(datos, ddof=1)
+n = len(datos)
+t_critico = stats.t.ppf(1-alpha/2, n-1)
+margen_error = t_critico * desviacion_estandar / np.sqrt(n)
+intervalo = (media_muestral - margen_error, media_muestral + margen_error)
+
+print("Intervalo de confianza del 95%:", intervalo)
+</code></div>
+    </pre>
+
+    <h3>Interpretación</h3>
+    <p>Podemos decir con un 95% de confianza que la altura promedio de todos los estudiantes de la universidad se encuentra dentro del intervalo calculado.</p>
+
+    <h3>Factores que afectan el ancho del intervalo de confianza</h3>
+    <ul>
+        <li><strong>Nivel de confianza:</strong> A mayor nivel de confianza, mayor ancho del intervalo.</li>
+        <li><strong>Tamaño de la muestra:</strong> A mayor tamaño de muestra, menor ancho del intervalo.</li>
+        <li><strong>Variabilidad de los datos:</strong> A mayor variabilidad, mayor ancho del intervalo.</li>
+    </ul>
+
+    <p>Los intervalos de confianza son una herramienta fundamental en inferencia estadística y se utilizan en una amplia variedad de aplicaciones, desde encuestas de opinión hasta ensayos clínicos.</p>
+      </section>
+
+
+
+  
+
+      <section class="main-section" id="Pruebas_de_hipótesis">
+        <header>Pruebas de hipótesis</header>
+    <p>Una prueba de hipótesis es un procedimiento estadístico que nos permite tomar decisiones sobre una afirmación acerca de una población. En esencia, comparamos una hipótesis nula (H₀) con una hipótesis alternativa (H₁).</p>
+
+    <h3>Pasos en una prueba de hipótesis</h3>
+    <ol>
+        <li><strong>Plantear las hipótesis:</strong> Definir la hipótesis nula (lo que queremos refutar) y la hipótesis alternativa (lo que queremos demostrar).</li>
+        <li><strong>Seleccionar un nivel de significancia (α):</strong> Este valor representa la probabilidad de rechazar incorrectamente la hipótesis nula cuando es verdadera.</li>
+        <li><strong>Calcular el estadístico de prueba:</strong> Un valor numérico que resume la evidencia en los datos.</li>
+        <li><strong>Determinar el valor p:</strong> La probabilidad de obtener un valor del estadístico de prueba tan extremo o más extremo que el observado, asumiendo que la hipótesis nula es verdadera.</li>
+        <li><strong>Tomar una decisión:</strong> Si el valor p es menor que el nivel de significancia, se rechaza la hipótesis nula.</li>
+    </ol>
+
+    <h3>Tipos de pruebas de hipótesis</h3>
+    <ul>
+        <li><strong>Prueba de una muestra:</strong> Compara la media o proporción de una muestra con un valor poblacional conocido.</li>
+        <li><strong>Prueba de dos muestras:</strong> Compara las medias o proporciones de dos muestras independientes o relacionadas.</li>
+        <li><strong>ANOVA:</strong> Compara las medias de más de dos grupos.</li>
+        <li><strong>Prueba de chi-cuadrado:</strong> Se utiliza para analizar tablas de contingencia y evaluar la independencia entre variables categóricas.</li>
+    </ul>
+
+    <h3>Ejemplo: Prueba t de una muestra</h3>
+    <p>Supongamos que queremos saber si la altura promedio de los estudiantes de una universidad es diferente de 170 cm. Nuestra hipótesis nula sería: H₀: μ = 170. La hipótesis alternativa podría ser H₁: μ ≠ 170. Calcularíamos el estadístico t y el valor p para tomar una decisión.</p>
+
+    <h3>Cálculo en Python</h3>
+    <pre>
+<div class="code"><code>import numpy as np
+import scipy.stats as stats
+
+# Datos de muestra
+datos = np.array([165, 172, 168, ..., 170])
+mu0 = 170
+alpha = 0.05
+
+# Cálculo del estadístico t y valor p
+t_statistic, p_value = stats.ttest_1samp(datos, mu0)
+
+# Tomar la decisión
+if p_value < alpha:
+    print("Rechazamos la hipótesis nula")
+else:
+    print("No rechazamos la hipótesis nula")
+    </code></div>
+    </pre>
+
+    <p>Las pruebas de hipótesis son una herramienta fundamental en la investigación científica. Nos permiten tomar decisiones basadas en datos y evaluar la validez de nuestras afirmaciones.</p>
+      </section>
+
+      <section class="main-section" id="Referencia">
+          <header id="Referencia">Referencia</header>
+          <p>Aprende más sobre la estadística con <a href="http://ndl.ethernet.edu.et/bitstream/123456789/37620/1/William%20Navidi_2015.pdf">este libro.</a></p>
+      </section>
+
+
+    </main>
+  </body>
+
+</html>
