@@ -1,0 +1,97 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+.header {
+  background-color: #808000;
+  color: black;
+  text-align: center;
+  padding-bottom: 1px;
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+figure > img {
+  border-radius: 5px;
+  margin: auto;
+}
+
+#img-caption {
+  text-align: center;
+  font-size: 18;
+  color: grey;
+}
+
+body {
+  background-color:brown;
+  color: orange;
+}
+
+p {
+  border-bottom: solid, 6px, black;
+  margin-left: 5%;
+}
+
+
+h2 {
+  color: #808000;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+hr {
+  width: 90%;
+  height: 2px;
+  background-color: #808000;
+  color: #808000;
+}
+
+a {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
+
+a:hover {
+  color: orange;
+}
+
+.poema {
+  color: orange;
+}
+
+.poema-caja {
+  width: 300px;
+  margin-left: 2%;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+}
+
+figcaption {
+  color: grey;
+  margin-left: 3%;
+}
+
+ul {
+  margin-left: 2%;
+}
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-left: 0;
+    width: 100%;
+  }
+}
