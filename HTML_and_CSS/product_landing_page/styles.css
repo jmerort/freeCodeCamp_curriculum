@@ -1,0 +1,97 @@
+* {
+  --amarillo: rgb(255, 230, 0);
+  --azulo: rgb(0, 80, 100);
+  --azulc: rgb(0, 160, 170);
+  --marron: rgb(160, 60, 30);
+}
+
+header {
+  background-color: var(--azulo);
+  color: var(--amarillo);
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 10px;
+  border-radius: 2%; 
+}
+
+.logo {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  padding: 10px;
+}
+
+#indice {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+
+a, a:visited {
+  text-decoration: none;
+  color: orangered;
+}
+
+a:hover {
+  background-color: pink;
+}
+
+body {
+  background-color: var(--azulc)
+}
+
+footer {
+  background-color: var(--azulo);
+  height: 100px;
+  color: var(--amarillo);
+  border-radius: 2%;
+}
+
+iframe {
+  border: 2px solid var(--amarillo);
+  border-radius: 5%;
+}
+
+#funcionamiento {
+  display: flex;
+  justify-content: center;
+}
+
+#compra {
+  display: flex;
+  justify-content: center;
+}
+
+.paquete {
+  height: auto;
+  width: 25%;
+  margin: 0 20px;
+  border: 2px solid var(--amarillo);
+  background-color: var(--marron);
+  text-align: center;
+  border-radius: 5%;
+}
+
+.caracteristicas {
+  display: flex;
+  flex-direction: column;
+}
+
+.caracteristicas li {
+  text-align: left;
+}
+
+.caracteristicas li::before {
+  content: "";
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  margin: auto 20px;
+}
