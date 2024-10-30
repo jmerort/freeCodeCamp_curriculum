@@ -12,6 +12,7 @@ header {
   justify-content: space-evenly;
   padding-left: 10px;
   border-radius: 2%; 
+  font-family: 'Baskervville', serif;
 }
 
 .logo {
@@ -21,6 +22,30 @@ header {
   width: 100px;
   position: relative;
   padding: 10px;
+}
+
+#form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#form input {
+  background-color:   purple;
+  color: #00beef;
+  margin: 5px auto;
+  font-size: 100%;
+  border-radius: 5%;
+}
+
+#form input::placeholder {
+  color: #00beef;
+}
+
+#submit {
+  font-size: 16;
+  font-weight: bold;
+  font-family: 'Raleway', serif;
 }
 
 #indice {
@@ -39,14 +64,9 @@ a:hover {
 }
 
 body {
-  background-color: var(--azulc)
-}
-
-footer {
-  background-color: var(--azulo);
-  height: 100px;
-  color: var(--amarillo);
-  border-radius: 2%;
+  background-color: var(--azulc);
+  font-family: 'Raleway', serif;
+  font-size: 110%;
 }
 
 iframe {
@@ -85,6 +105,20 @@ iframe {
 
 .caracteristicas li::before {
   content: "";
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--azulo);
+  height: 100px;
+  color: var(--amarillo);
+  border-radius: 2%;
+}
+
+
+footer p {
+  margin: auto 20px;
 }
 
 footer {
