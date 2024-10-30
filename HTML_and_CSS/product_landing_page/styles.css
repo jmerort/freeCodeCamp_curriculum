@@ -120,12 +120,3 @@ footer {
 footer p {
   margin: auto 20px;
 }
-
-footer {
-  display: flex;
-  justify-content: center;
-}
-
-footer p {
-  margin: auto 20px;
-}
