@@ -115,3 +115,32 @@ footer {
 footer p {
   margin: auto 20px;
 }
+
+footer a {
+  color: var(--amarillo);
+  font-weight: bold;
+  font-size: 110%;
+}
+
+hr {
+  width: 50%;
+  margin: 10px auto;
+}
+
+@media only screen and (max-width: 720px) {
+  
+}
+
+@media only screen and (max-width: 750px) {
+  .logo {
+    margin: 20px;
+  }
+  body{
+  margin: 10px;
+  }
+  .paquete {
+      margin: 0 5px;
+      width: 30%;
+  }
+}
+
