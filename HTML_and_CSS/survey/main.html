@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Mi encuesta</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">  
+  </head>
+
+  <body>
+    <div class="intro">
+      <h1 id="title">Encuesta de freeCodeCamp</h1>
+      <p id="description">Gracias por ayudar a hacer esta página mejor
+    </div>
+      </p>
+    <div class="encuesta">
+      <form method="post" action="https://register-demo.freecodecamp.org" id="survey-form">
+
+        <fieldset>
+          <legend><strong>Datos personales</strong></legend>
+          <label for="name" id="name-label">Nombre<input type="text" id="name" placeholder="Mi nombre" required></label>
+          <label for="email" id="email-label">Correo<input type="email" id="email" placeholder="mi@correo.tal" required></label>
+          <label for="number" id="number-label">Edad<input type="number" id="number" max="2500" min="8" placeholder="XX" required></label>
+        </fieldset>
+
+
+
+        <fieldset>
+          <legend><strong>Cuestiones generales</strong></legend>
+          <p>¿Estás contento con freeCodeCamp?</p>
+          <div class="primera"><label for="conse"><input type="radio" name="teoria" id="conse" value="conse" checked>Sí</label></div>
+          <div><label for="conse"><input type="radio" name="teoria" id="conse" value="conse">Más o menos</label></div>
+          <div class="ultima"><label for="vir"><input type="radio" name="teoria" id="vir" value="vir">No</label></div> 
+          <label for="dropdown">¿Cuál es tu situación laboral?
+            <select id="dropdown" name="fin">
+              <option value="">(Elige una)</option>
+              <option value="1">Estudiante</option>
+              <option value="2">En busca de empleo</option>
+              <option value="3">Trabajador</option>
+              <option value="4">Jubilado</option>
+              <option value="5">Otra</option>
+            </select>
+          </label>
+          <p>¿Qué caratcerísticas de freeCodeCamp usas?</p>
+          <div class="primera"><input id= "valor" type="checkbox" name="valores" value="valor"><label for="valor">Certificaciones</label></div>
+          <div><input id="intel" type="checkbox" name="valores" value="intel"><label for="intel">Videotutoriales</label></div>
+          <div><input id="auto" type="checkbox" name="valores" value="auto"><label for="auto">Artículos</label></div>
+          <div><input id="gener" type="checkbox" name="valores" value="gener"><label for="gener">Foro</label></div>
+          <div><input id="empat" type="checkbox" name="valores" value="empat"><label for="empat">Noticias</label></div>
+          <div><input id="volunt" type="checkbox" name="valores" value="volunt"><label for="volunt">Podcast</label></div>
+          <div><input id="sabid" type="checkbox" name="valores">
+        </fieldset>
+
+      
+
+        <fieldset>
+          <legend><strong>Sugerencias</strong></legend>
+          <label for="explicacion">¿Qué cambiarías de esta página?
+            <textarea id="explicacion" name="explicacion" rows="3" cols="50" placeholder="Para mí lo más importante es..."></textarea>
+          </label>
+        </fieldset>
+      <div class="outro">
+      <input type="submit" value="Enviar" id="submit">
+      </div>
+      </form>
+    </div>
+  </body>
+
+</html>
