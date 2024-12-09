@@ -8,25 +8,21 @@
   </head>
 
   <body>
-    <div class="intro">
-      <h1 id="title">Encuesta de freeCodeCamp</h1>
-      <p id="description">Gracias por ayudar a hacer esta página mejor
-    </div>
-      </p>
     <div class="encuesta">
       <form method="post" action="https://register-demo.freecodecamp.org" id="survey-form">
-
-        <fieldset>
-          <legend><strong>Datos personales</strong></legend>
+        <fieldset class="intro">
+          <h1 id="title">Encuesta de freeCodeCamp</h1>
+          <p id="description">Completa la encuesta con tus datos. Gracias por ayudar a hacer esta página mejor.
+        </fieldset>
+        <fieldset class="personales">
           <label for="name" id="name-label">Nombre<input type="text" id="name" placeholder="Mi nombre" required></label>
-          <label for="email" id="email-label">Correo<input type="email" id="email" placeholder="mi@correo.tal" required></label>
+          <label for="email" id="email-label">Correo<input type="email" id="email" placeholder="mi@correo.etc" required></label>
           <label for="number" id="number-label">Edad<input type="number" id="number" max="2500" min="8" placeholder="XX" required></label>
         </fieldset>
 
 
 
-        <fieldset>
-          <legend><strong>Cuestiones generales</strong></legend>
+        <fieldset class="preguntas">
           <p>¿Estás contento con freeCodeCamp?</p>
           <div class="primera"><label for="conse"><input type="radio" name="teoria" id="conse" value="conse" checked>Sí</label></div>
           <div><label for="conse"><input type="radio" name="teoria" id="conse" value="conse">Más o menos</label></div>
@@ -48,15 +44,12 @@
           <div><input id="gener" type="checkbox" name="valores" value="gener"><label for="gener">Foro</label></div>
           <div><input id="empat" type="checkbox" name="valores" value="empat"><label for="empat">Noticias</label></div>
           <div><input id="volunt" type="checkbox" name="valores" value="volunt"><label for="volunt">Podcast</label></div>
-          <div><input id="sabid" type="checkbox" name="valores">
         </fieldset>
-
       
 
-        <fieldset>
-          <legend><strong>Sugerencias</strong></legend>
+        <fieldset class="sugerencias">
           <label for="explicacion">¿Qué cambiarías de esta página?
-            <textarea id="explicacion" name="explicacion" rows="3" cols="50" placeholder="Para mí lo más importante es..."></textarea>
+            <textarea id="explicacion" name="explicacion" rows="4" cols="50" placeholder="Para mí lo más importante es..."></textarea>
           </label>
         </fieldset>
       <div class="outro">
