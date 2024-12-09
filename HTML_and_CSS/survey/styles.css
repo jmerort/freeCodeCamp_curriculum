@@ -1,0 +1,61 @@
+h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+p {
+  margin-left: 2%
+}
+
+body {
+  background-color: white;
+}
+
+.intro {
+  background-color: rgb(255,200, 100);
+  width: 80vw;
+  margin: auto;
+  border-radius: 2%;
+}
+
+.encuesta {
+  width: 70vw;
+  background-color: rgb(255,255,180);
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea,select {
+  display: block;
+  margin: 5px 0 0 0;
+  background-color: rgb(255,200, 100);
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 1em auto;
+  width: 60%;
+  height: 2em;
+  font-size: 1rem;
+  background-color: orange;
+  border-color: black;
+}
+
+input[type="radio"] {
+  display: inline;
+  accent-color: rgb(255,200,100);
+}
+
+input[type="checkbox"] {
+  display: inline;
+  accent-color: rgb(255,200,100);
+}
+
+.primera {
+  margin-top: -10px;
+}
+
+.ultima {
+  margin-bottom: 10px
+}
