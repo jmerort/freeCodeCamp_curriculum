@@ -1,33 +1,36 @@
-:root {
-  --naranja: orangered;
-  --morado: rgb(100, 0, 120);
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--morado);
+  background-color: black;
+  color: white;
 }
 
 #navbar {
-  background-color: var(--naranja);
-  border-radius: 2%;
-  padding: 0 10px;
   display: flex;
 }
 
 #navbar ul {
+  position: absolute;
+  right: 2vw;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
   list-style-type: none;
 }
 
 a {
-  padding: 10px;
-  margin: 10px;
   text-decoration: none;
-  border: 2px solid blue;
+  color: white;
+  padding: 10px;
+}
+
+#nombre {
+  position: absolute;
+  left: -65vw;
+  color: red;
 }
 
 #welcome-section{
@@ -35,14 +38,9 @@ a {
 }
 
 .carta {
-  background-color: rgb(190, 150, 100);
-
 }
 
 .prim {
-  border: 8px solid rgb(150, 120, 80);
-  border-bottom: 0;
-  border-radius: 10% 0 5% 0;
 }
 
 #projects {
