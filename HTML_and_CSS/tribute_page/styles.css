@@ -1,43 +1,60 @@
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    --ocre: rgb(220,75,35);
+    --verde: rgba(20, 80, 30,1);
   }
 }
 
 .header {
-  background-color: #808000;
+  background-color: var(--verde);
   color: black;
   text-align: center;
-  padding-bottom: 1px;
-  margin: 0px 10px;
-  border-radius: 5px;
-}
-
-figure > img {
-  border-radius: 5px;
+  width: 80vw;
   margin: auto;
+  padding-bottom: 1px;
+  border-radius: 5px;
+  font-family: 'Baskervville', serif;
 }
 
 #img-caption {
   text-align: center;
   font-size: 18;
-  color: grey;
 }
 
 body {
-  background-color:brown;
-  color: orange;
+  background-color:var(--ocre);
+  color: black;
+  font-size: 1.5rem;
+  margin: auto;
+  width: 80vw;
 }
+
+figure > img {
+  border-radius: 5px;
+}
+
+
 
 p {
   border-bottom: solid, 6px, black;
-  margin-left: 5%;
+  font-family: 'Raleway', serif;
 }
 
+li {
+  font-family: 'Raleway', serif;
+}
+
+h1 {
+  font-size: 220%;
+}
 
 h2 {
-  color: #808000;
+  color: var(--verde);
   text-align: center;
+  font-family: 'Baskervville', serif;
+  font-size: 200%;
 }
 
 img {
@@ -47,9 +64,9 @@ img {
 
 hr {
   width: 90%;
-  height: 2px;
-  background-color: #808000;
-  color: #808000;
+  height: 3px;
+  border-color: black;
+  background-color: black;
 }
 
 a {
@@ -65,28 +82,17 @@ a:hover {
 }
 
 .poema {
-  color: orange;
+  font-family: times;
 }
 
-.poema-caja {
-  width: 300px;
-  margin-left: 2%;
-  border-left: 2px solid grey;
-  border-right: 2px solid grey;
-}
 
 figcaption {
-  color: grey;
-  margin-left: 3%;
+  font-family: 'Raleway', serif;
 }
 
-ul {
-  margin-left: 2%;
-}
-
-body {
-  margin-left: 10%;
-  margin-right: 10%;
+#biografia {
+  margin: auto;
+  width: 80vw;
 }
 
 @media (max-width: 600px) {
@@ -95,3 +101,4 @@ body {
     width: 100%;
   }
 }
+
