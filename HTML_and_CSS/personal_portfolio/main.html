@@ -15,8 +15,10 @@
   <body>
     <main>
       <nav id="navbar">
-        <ul>
+        <ul id="contenedor-nombre">
           <li id="nombre">Jmerort</li>
+        </ul>
+        <ul id="secciones">
           <li><a href="#welcome-section">bienvenida</a></li>
           <li><a href="#projects">proyectos</a></li>
           <li><a href="#contact">contacto</a></li>
@@ -24,8 +26,10 @@
       </nav>
       <hr>
 
-      <h1>Bienvenidos a mi portfolio</h1>
+ 
       <section id="welcome-section">
+        <h1>Bienvenidos a mi portfolio</h1>
+        <img src="https://avatars.githubusercontent.com/u/181523222?v=4" id="profile-picture">
         <p class="carta prim">Soy Javier Merino, ingeniero electrónico. En este portfolio podréis ver algunos proeyctos en los que he estado trabajando últimamente, obtener mi información de contacto y aprender algo sobre mí.</p>
         <p class=" carta seg">Segundo párrafo de la introducción. En el que se cuentan algunas cosas que interesarán al lector y se introduce mi trabajo.</p>
         <p class="carta terc">Tercer y último párrafo, en el que me despido e invito al lector interesado a contactar conmigo.</p>
@@ -34,49 +38,78 @@
       <hr>
 
 
-      <h1>proyectos</h1>
       <section id="projects">
-        <div class="project" id="encuesta">
-          <figure>
-            <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-            <figcaption>Encuesta</figcaption>
-          </figure>
-        </div>
+        <h1>Proyectos</h1>
+        <div id="project-box">
+          <div class="project" id="encuesta">
+            <figure class="project-tile">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
+              <figcaption>Encuesta</figcaption>
+            </figure>
+          </div>
 
-        <div class="project" id="tributo">
-          <figure>
-            <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-            <figcaption>Tributo</figcaption>
-          </figure>
-        </div>
+          <div class="project" id="tributo">
+            <figure class="project-tile">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
+              <figcaption>Tributo</figcaption>
+            </figure>
+          </div>
 
-        <div class="project" id="documentacion">
-          <figure>
-            <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-            <figcaption>Documentación</figcaption>
-          </figure>
-        </div>
+          <div class="project" id="documentacion">
+            <figure class="project-tile">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
+              <figcaption>Documentación</figcaption>
+            </figure>
+          </div>
 
-        <div class="project" id="producto">
-          <figure>
-            <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-            <figcaption>Producto</figcaption>
-          </figure>
-        </div>
-      </section>
-
+          <div class="project" id="producto">
+            <figure class="project-tile">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
+              <figcaption>Producto</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
       <hr>
+
       <section id="contact">
-        contacto
+        <h1>Contacto</h1>
+        <div class="formulario">
+          <form method="post" action="https://register-demo.freecodecamp.org" id="data-form">
+            <fieldset class="personales">
+              <label for="name" id="name-label">Nombre<input type="text" id="name" placeholder="Mi nombre" required></label>
+              <label for="email" id="email-label">Correo<input type="email" id="email" placeholder="mi@correo.etc" required></label>
+              <label for="number" id="number-label">Teléfono<input type="number" id="number" max="130" min="8" placeholder="XX" required></label>
+              <label for="explicacion">Mensaje
+            <textarea id="explicacion" name="explicacion" rows="4" cols="50" placeholder="Texto de ejemplo"></textarea>
+          </label>
+            </fieldset>
       </section>
 
       <hr>
     </main>
 
     <footer id="footer">
-      adios
+      <h2>Encuéntrame en la web</h2>
+      <div class="social-icons">
+          <a href="https://www.facebook.com/freecodecamp/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/freecodecamp/">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/freecodecamp">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/school/free-code-camp/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/freecodecamp">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <p id="outro">Página creada para el currículum de HTML y CSS de freeCodeCamp</p>
     </footer>
-    <hr>
   </body>
 
 </html>
