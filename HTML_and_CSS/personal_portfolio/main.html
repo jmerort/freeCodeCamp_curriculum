@@ -9,8 +9,9 @@
       rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <link rel="stylesheet" href="styles.css"/>
-  </head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
+  </head>
 
   <body>
     <main>
@@ -19,60 +20,54 @@
           <li id="nombre">Jmerort</li>
         </ul>
         <ul id="secciones">
-          <li><a href="#welcome-section">bienvenida</a></li>
-          <li><a href="#projects">proyectos</a></li>
-          <li><a href="#contact">contacto</a></li>
+          <li><a href="#welcome-section">Bienvenida</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
-      <hr>
 
- 
       <section id="welcome-section">
+        <hr class="divider prim-div">
         <h1>Bienvenidos a mi portfolio</h1>
         <img src="https://avatars.githubusercontent.com/u/181523222?v=4" id="profile-picture">
         <p class="carta prim">Soy Javier Merino, ingeniero electrónico. En este portfolio podréis ver algunos proeyctos en los que he estado trabajando últimamente, obtener mi información de contacto y aprender algo sobre mí.</p>
-        <p class=" carta seg">Segundo párrafo de la introducción. En el que se cuentan algunas cosas que interesarán al lector y se introduce mi trabajo.</p>
-        <p class="carta terc">Tercer y último párrafo, en el que me despido e invito al lector interesado a contactar conmigo.</p>
+        <p class=" carta seg">Este portfolio es el proyecto final de la certificación de HTML y CSS de freeCodeCamp, y contiene enlaces a los otros proyectos y a mis redes sociales.</p>
+        <p class="carta terc">Gracias por tu tiempo. Si te interesa, podrás encontrar mi información de contacto abajo.</p>
       </section>
 
-      <hr>
 
 
       <section id="projects">
-        <h1>Proyectos</h1>
+        <hr class="divider">
+        <h1 id="titulo-proyectos">Proyectos</h1>
+
         <div id="project-box">
-          <div class="project" id="encuesta">
-            <figure class="project-tile">
-              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-              <figcaption>Encuesta</figcaption>
-            </figure>
+
+          <div class="project-tile" id="encuesta">
+              <a href="google.es"><img src="https://github.com/jmerort/freeCodeCamp_curriculum/blob/main/HTML_and_CSS/survey/Mi%20encuesta.png?raw=true"></a>
+              <p>Encuesta</p>
           </div>
 
-          <div class="project" id="tributo">
-            <figure class="project-tile">
-              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-              <figcaption>Tributo</figcaption>
-            </figure>
+          <div class="project-tile" id="tributo">
+              <a href="google.es"><img src="https://github.com/jmerort/freeCodeCamp_curriculum/blob/main/HTML_and_CSS/tribute_page/Miguel%20de%20Unamuno.png?raw=true"></a>
+              <p>Tributo</p>
           </div>
 
-          <div class="project" id="documentacion">
-            <figure class="project-tile">
-              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-              <figcaption>Documentación</figcaption>
-            </figure>
+          <div class="project-tile" id="documentacion">
+              <a href="google.es"><img src="https://github.com/jmerort/freeCodeCamp_curriculum/blob/main/HTML_and_CSS/technical_documentation_page/aaaa.png?raw=true"></a>
+              <p>Documentación</p>
           </div>
 
-          <div class="project" id="producto">
-            <figure class="project-tile">
-              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-              <figcaption>Producto</figcaption>
-            </figure>
+          <div class="project-tile" id="producto">
+            <a href="google.es"><img src="https://github.com/jmerort/freeCodeCamp_curriculum/blob/main/HTML_and_CSS/product_landing_page/OVIS-1.png?raw=true"></a>
+            <p>Producto</p>
           </div>
-        </section>
-      </div>
-      <hr>
+
+        </div>
+      </section>
 
       <section id="contact">
+        <hr class="divider">
         <h1>Contacto</h1>
         <div class="formulario">
           <form method="post" action="https://register-demo.freecodecamp.org" id="data-form">
@@ -86,26 +81,23 @@
             </fieldset>
       </section>
 
-      <hr>
     </main>
+    
+    <hr class="divider">
+
 
     <footer id="footer">
+      
       <h2>Encuéntrame en la web</h2>
       <div class="social-icons">
-          <a href="https://www.facebook.com/freecodecamp/">
-            <i class="fab fa-facebook-f"></i>
+          <a href="https://www.facebook.com/freecodecamp/" id="github-link">
+            <i class="fab fa-github"></i>
           </a>
-          <a href="https://twitter.com/freecodecamp/">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://instagram.com/freecodecamp">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/school/free-code-camp/">
+          <a href="https://www.linkedin.com/school/free-code-camp/" id="linkedin-link">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://www.youtube.com/freecodecamp">
-            <i class="fab fa-youtube"></i>
+          <a href="https://www.freecodecamp.com/jmerort" id="profile-link" target="_blank">
+            <i class="fab fa-free-code-camp"></i>
           </a>
         </div>
         <p id="outro">Página creada para el currículum de HTML y CSS de freeCodeCamp</p>
